@@ -1,11 +1,33 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="android:Theme.Material">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="LabelStyle" parent="@style/TextStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="GoldLabelStyle" parent="@style/LabelStyle">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="android:textColorPrimary">@color/colorBlack</item>
+    </style>
+
+    <!--Note: this inherited style removes the grey background a standard button has-->
+    <style name="BigMediaButton" parent="@android:style/MediaButton">
+        <item name="android:textSize">22sp</item>
     </style>
 
 </resources>
